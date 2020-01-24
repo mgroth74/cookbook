@@ -1,10 +1,8 @@
-import React, { useState } from "react";
-import { Link, Route } from "react-router-dom";
+import React from "react";
+
 
 function Home(props) {
   if (props.data) {
-    console.log(props);
-
     let recipeList = props.data.map((item, _id) => {
       return (
         <div className="recipe" key={item._id}>
@@ -18,7 +16,6 @@ function Home(props) {
 
     return (
       <div>
-        <div className="body">this is the list of recipes</div>
         <div className="recipelist">{recipeList}</div>
       </div>
     );
